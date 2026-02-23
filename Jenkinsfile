@@ -81,8 +81,8 @@ pipeline {
                     set -e
                     echo "Copying deploy playbook..."
 
-                    sudo cp "$WORKSPACE/deploy-container.yml" /home/ansible/
-                    sudo chown ansible:ansible /home/ansible/deploy-container.yml
+                    sudo cp "$WORKSPACE/deploy.yml" /home/ansible/
+                    sudo chown ansible:ansible /home/ansible/deploy.yml
 
                     echo "File copied successfully!"
                 '''
@@ -93,7 +93,7 @@ pipeline {
             steps {
                 sh '''
                     set -e
-                    sudo -u ansible ansible-playbook /home/ansible/deploy-container.yml
+                    sudo -u ansible ansible-playbook /home/ansible/deploy.yml
                 '''
             }
         }
