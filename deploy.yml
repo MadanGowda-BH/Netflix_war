@@ -1,7 +1,7 @@
 
 
 ---
-# Swiggy Project – Ansible Docker Deployment
+#netflix Project – Ansible Docker Deployment
 # Developed & Automated by: madangowdabh
 
 - name: Deploy latest Swiggy container from DockerHub
